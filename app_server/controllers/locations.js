@@ -3,7 +3,7 @@
  */
 /* Get Home Page */
 module.exports.homeList = function (req, res) {
-    res.render('locations-list', { title :　'home'});
+    res.render('locations-list', { title :　'Home'});
 };
 
 /* Get Location info page */

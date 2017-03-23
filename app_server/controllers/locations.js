@@ -35,10 +35,49 @@ module.exports.homeList = function (req, res) {
 /* Get Location info page */
 module.exports.locationInfo = function (req, res) {
     res.render('location-info', {
-        title: 'location info',
+        title: 'Starcups',
         pageHeader: {
             title: 'wifidot1',
             strapline: 'WiFi,好东西.'
+        },
+        sidebar: {
+            context: 'good',
+            callToAction: 'nice!!!!@###'
+        },
+        location:{
+            name: 'Starcups',
+            address: '联航路123',
+            rating: 3,
+            facilities: ['Drink','Food','WiFi'],
+            coords:{
+                lat: 123,
+                lng: 123,
+            },
+            openingTimes: [{
+                days: '星期一 - 星期五',
+                opening: '7:00am',
+                closing: '7:00pm',
+                closed: false
+            },{
+                days: '星期六',
+                opening: '8:00am',
+                closing: '5:00pm',
+                closed: false
+            },{
+                days: '星期天',
+                closed: true
+            }],
+            reviews: [{
+                author: 'lusai',
+                rating: 4,
+                timestamp: '2016-08-09',
+                reviewText: 'What a greate place!!!'
+            },{
+                author: 'wade',
+                rating: 5,
+                timestamp: '2016-07-09',
+                reviewText: 'nice place...'
+            }]
         }
     });
 };

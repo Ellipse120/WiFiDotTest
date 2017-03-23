@@ -4,7 +4,7 @@
 /* Get Home Page */
 module.exports.homeList = function (req, res) {
     res.render('locations-list', {
-        title: 'WiFiDot2',
+        title: 'WiFiDot',
         pageHeader: {
             title: 'wifidot',
             strapline: '哪里有WiFi,哪里就能干活.'

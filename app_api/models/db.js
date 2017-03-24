@@ -4,6 +4,9 @@
 var mongoose = require('mongoose');
 var dbURI = 'mongodb://localhost/WifiDot2';
 
+// mpromise 过时问题
+mongoose.Promise = global.Promise;
+
 var gracefulShutdown = function (msg, callback) {
     mongoose.connection.close(function () {
         console.log('Mongoose disconnected through ' + msg);

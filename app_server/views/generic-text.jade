@@ -9,6 +9,4 @@ block content
 				h1= title
 	.row
 		.col-md-6.col-sm-12
-			p
-				| WiFiDot是你的好帮手
-				| <br />
+			p !{(content).replace(/\n/g,'<br/>')}

@@ -84,5 +84,11 @@ module.exports.locationInfo = function (req, res) {
 
 /* Get 'Add Review' Page */
 module.exports.addReview = function (req, res) {
-    res.render('location-review-form', {title: 'add review'});
+    res.render('location-review-form', {
+        title: 'Review Starcups on WiFiDot',
+        peageHeader: {
+            title: 'Review Starcups'
+        }
+    });
+
 };

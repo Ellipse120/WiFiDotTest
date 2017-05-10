@@ -3,8 +3,7 @@
     <envs>
       <env name="DEBUG" value="WiFiDotTest:*" />
     </envs>
-    <browser url="http://localhost:3000/" />
-    <profiling v8-profiler-path="" />
+    <browser start="true" url="http://localhost:3000/" />
     <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
       <option name="envVars">
         <list />
@@ -26,11 +25,8 @@
         <list />
       </option>
     </EXTENSION>
-    <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
-      <profiling v8-profiler-path="" />
-    </EXTENSION>
     <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
-      <browser url="http://localhost:3000/" />
+      <browser start="true" url="http://localhost:3000/" />
     </EXTENSION>
     <method />
   </configuration>

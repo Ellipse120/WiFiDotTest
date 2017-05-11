@@ -26,21 +26,25 @@ var theEarth = (function () {
     }
 })();
 
+/*
+* GET list of locations
+*/
 module.exports.locationsListByDistance = function (req, res) {
     var lng = parseFloat(req.query.lng);
     var lat = parseFloat(req.query.lat);
-    // var maxDistance = parseFloat(req.query.maxDistance);
+    var maxDistance = parseFloat(req.query.maxDistance);
     var point = {
         type: "Point",
         coordinates: [lng, lat]
     };
+
     var geoOptions = {
         spherical: true,
-        maxDistance: theEarth.getRadsFromDistance(20),
+        maxDistance: theEarth.getRadsFromDistance(maxDistance),
         num: 10
     };
 
-    if (!lng || !lat) {
+    if ((!lng && lng !== 0) || (!lat && lat !== 0)) {
         console.log('locationsListByDistance missing params');
         sendJsonResponse(res, 404, {
             "message": "lng, lat and maxDistance query parameters are all required."

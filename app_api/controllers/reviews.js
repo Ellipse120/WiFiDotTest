@@ -29,7 +29,7 @@ module.exports.reviewsCreate = function (req, res) {
     }
 };
 
-var doAddReivew = function (req, res, location) {
+var doAddReview = function (req, res, location) {
     if (!location) {
         sendJSONresponse(res, 404, "locationid not found.");
     } else {
@@ -120,7 +120,7 @@ module.exports.reviewsReadOne = function (req, res) {
     }
 };
 
-module.exports.reviewUpdateOne = function (req, res) {
+module.exports.reviewsUpdateOne = function (req, res) {
     if (!req.params.locationid || !req.params.reviewid) {
         sendJSONresponse(res, 404, {
             "message": "Not found, locationid and reviewid are both required."
@@ -171,7 +171,7 @@ module.exports.reviewUpdateOne = function (req, res) {
 /*
  * DELETE /api/locations/:locationid/reviews/:reviewid
  */
-module.exports.reviewDeleteOne = function (req, res) {
+module.exports.reviewsDeleteOne = function (req, res) {
     if (!req.params.locationid || !req.params.reivewid) {
         sendJSONresponse(res, 404, {
             "message": "Not found, locationid and reviewid are both required."
